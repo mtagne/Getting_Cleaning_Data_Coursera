@@ -45,7 +45,7 @@ This script, run_analysis.R,  works as follows :
 	c. summarise_each with arguments mean() is used to calculate the average for each variable in the dataset.
 	d. write.table is used to create text file containing the new tidy data frame.
 
-Appendix A : Variable Lists :
+Appendix A : Variable Lists (code book) :
 ==============================
 The variables order is the result of the final aggregation by activity and subject as required by the step 5 of the assignment (10 above). The training and test sets have the same variable names with "activiy" and "subject" variables located at the tails of both dataframe (indexes 562, 563).
 
