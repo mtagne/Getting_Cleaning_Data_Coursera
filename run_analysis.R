@@ -102,6 +102,7 @@ tr_test.df$activity <- mapvalues(tr_test.df$activity, activities$number, activit
 ##5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 DF_avg_act_subj <- tr_test.df %>%
   group_by(activity, subject) %>%
-  summarise_each(funs(mean))
+  summarise_each(funs(mean)) %>%
+  select(contains("activity"), contains("subject"), contains("std", ignore.case = FALSE), contains("mean", ignore.case = FALSE), -contains("meanFreq"))
 #write dataset to a file
 write.table(DF_avg_act_subj, "DF_avg_act_subj.txt", row.name=FALSE)
